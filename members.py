@@ -1,6 +1,7 @@
 def normalize_email(member: dict) -> str | None:
     """Lower-cased, stripped email, or None if the member has no email."""
-    return member.get("email").strip().lower()
+    email = member.get("email")
+    return email.strip().lower() if email else None
 
 
 def full_name(member: dict) -> str:
