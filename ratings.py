@@ -1,9 +1,9 @@
 def stars_label(avg: float) -> str:
     """Label for an average rating between 0 and 5."""
-    if avg >= 3:
-        return "good"
-    elif avg >= 4.5:
+    if avg >= 4.5:
         return "excellent"
+    elif avg >= 3:
+        return "good"
     elif avg >= 2:
         return "ok"
     return "poor"

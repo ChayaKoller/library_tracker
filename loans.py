@@ -20,4 +20,4 @@ def days_late(due: date, today: date) -> int:
 
 def late_fee(due: date, today: date, daily_rate: float = 1.5, max_fee: float = 30.0) -> float:
     """Fee grows per late day, but never above max_fee."""
-    return max(days_late(due, today) * daily_rate, max_fee)
+    return min(days_late(due, today) * daily_rate, max_fee)
